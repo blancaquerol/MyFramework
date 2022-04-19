@@ -1,0 +1,83 @@
+.grid--12
+    display: grid
+    grid-template-columns: repeat(12,1fr)
+    margin: $base * 10 120px
+    column-gap: $base * 5
+    grid-row-gap: $base * 5
+    .col
+        grid-column: span 1
+    .col-2
+        grid-column: span 2
+    .col-3
+        grid-column: span 3
+    .col-4
+        grid-column: span 4
+    .col-5
+        grid-column: span 5
+    .col-6
+        grid-column: span 6
+    .col-7
+        grid-column: span 7
+    .col-8
+        grid-column: span 8
+    .col-9
+        grid-column: span 9
+    .col-10
+        grid-column: span 10
+    .col-11
+        grid-column: span 11
+    .col-12
+        grid-column: span 12
+    @media screen and ( max-width: 1100px )
+        grid-template-columns: repeat(6,1fr)
+        margin: $base * 10 $base * 20
+        .col-12, .col-10, .col-9, .col-8, .col-7
+            grid-column: span 6
+        .col-6, .col-5, .col-4, .col, .col-2, .col-3
+            grid-column: span 3
+    @media screen and ( max-width: 800px )
+        display: block
+        margin: $base * 10
+.no-m
+    margin: 0
+    width: 100%
+
+.no-gap
+    column-gap: 0
+.no-rowgap
+    grid-row-gap: 0
+
+//TABLA
+.responsive--table
+    overflow-x: auto
+    table
+        border-collapse: collapse
+        width: fit-content
+        tr
+            th
+                background-color: $primary
+                color: white
+                font-size: 1.2rem
+                font-weight: 400
+                padding: $base * 2 $base * 5
+            &:nth-child(even)
+                background-color: $table--blue
+            &:nth-child(odd)
+                background-color: $table--lightblue
+            &:hover
+                background-color: $table--hover
+            td
+                padding: $base * 3 $base * 5
+//FLEX
+.flex
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    .button
+        margin: 0 $base * 2
+
+.flex-col
+    display: flex
+    flex-direction: column
+    justify-content: center

@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css
+    ">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400&display=swap');
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a class="logo" href="../home.html"><img src="../assets/images/logotipo.svg" alt="logotipo"></a>
+        <nav class="navbar">
+            <ul class="navbar--items" id="menu">
+                <li class="navbar--link"><a class="link" href="../home.html">Inicio</a></li>
+                <li class="navbar--link"><a class="link" href="ejemplos.html">Ejemplos</a></li>
+                <li class="navbar--link"><a class="link active--link" href="#">Componentes</a></li>
+            </ul>
+            <div id="toggle">
+                <div class="span" id="one"></div>
+                <div class="span" id="two"></div>
+                <div class="span" id="three"></div>
+            </div>
+        </nav>
+        <div id="resize">
+            <ul id="menu">
+                <li><a href="../home.html">Inicio</a></li>
+                <li><a href="ejemplos.html">Ejemplos</a></li>
+                <li><a href="#">Componentes</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="hero">
+        <img class="hero--img" src="../assets/images/portada_componentes.jpg" alt="">
+    </div>
+    <div class="h1--box">
+        <h1>Componentes</h1>
+        <h2>Constrúye webs a tu gusto</h2>
+    </div>
+    <nav class="sidebar navbar">
+        <ul class="navbar--items list">
+            <li><a class="link" href="#typography">Typography</a></li>
+            <li><a class="link" href="#layout">Layout</a></li>
+            <li><a class="link" href="#components">Components</a></li>
+            <li><a class="link" href="#utilities">Utilities</a></li>
+        </ul>
+    </nav>
+    <article class="grid--12" id="typography">
+        <section class="col-12">
+            <h3>Typography</h3>
+        </section>
+        <section class="col-6 my10">
+            <h4>Fuentes</h4>
+            <p>Comenzamos por lo más básico: <span class="bold--p">la tipografía.</span> Este Framework utiliza dos
+                fuentes, una para los títulos
+                más
+                importantes (H1): <span class="bold--p">Spectral</span>, y otra para el resto de textos: <span
+                    class="bold--p">Karla</span>. Estas tipografías combinan a la
+                perfección dándole un toque moderno a tu web, combinando la tipografía con serif y la palo seco.
+                <br>
+                En caso de que quieras modificarlas, cambia las variables: <span
+                    class="bold--primary">$displayfont</span> o <span class="bold--primary">$textfont</span>
+                introduciendo el
+                nombre de la fuente que has importado a tu código.</p>
+        </section>
+        <section class="col-6 my10 px5 bg-1">
+            <h1>Soy un título</h1>
+            <h2>Yo un texto cualquiera</h2>
+        </section>
+        <section class="col-6 my10">
+            <h4>Tamaños de texto</h4>
+            <p class="my5">A la derecha puedes ver como funciona la <span class="bold--p">jerarquía</span> de los
+                distintos textos de la web.
+                Tienes a tu
+                disposición un título principal <span class="bold--primary">(h1)</span>, tres estilos de subtítulos,
+                dependiendo de la importancia que
+                quieras darle <span class="bold--primary">(h2, h3, h4)</span>, un cuerpo de texto <span
+                    class="bold--primary">(p)</span>, un pie de foto <span class="bold--primary">(h5)</span> y una
+                tipografía small
+                <span class="bold--primary">(small)</span>. <br> Utiliza <span class="bold--primary">&lt;br&gt;</span>
+                para crear una pequeña separación entre párrafos.</p>
+            <div class="border bg-1">
+                <pre><code>&lt;h1&gt;T&iacute;tulo&lt;/h1&gt;
+&lt;h2&gt;Subt&iacute;tulo principal&lt;/h2&gt;
+&lt;h3&gt;Subtitulo secundario&lt;/h3&gt;
+&lt;h4&gt;Subt&iacute;tulo terciario&lt;/h4&gt;
+&lt;p&gt;Cuerpo de texto&lt;/p&gt;
+&lt;h5&gt;Pie de foto&lt;/h5&gt;
+&lt;small&gt;Small&lt;/small&gt;</code></pre>
+            </div>
+        </section>
+        <section class="col-6 my10 px5 bg-1 flex-col">
+            <h1>Título</h1>
+            <h2>Subtítulo principal</h2>
+            <h3>Subtitulo secundario</h3>
+            <h4>Subtítulo terciario</h4>
+            <p>Cuerpo de texto</p>
+            <h5>Pie de foto</h5>
+            <small>Small</small>
+        </section>
+        <section class="col-6 my10">
+            <h4>Estilos de texto</h4>
+            <p class="my5">Para <span class="bold--p">cambiar el peso</span> o el estilo del texto, solo tienes que
+                poner la clase
+                correspondiente. Para textos en negrita, utiliza la clase <span class="bold--primary">“bold—p”</span>;
+                para la cursiva, <span class="bold--primary">“italic”</span>.
+                <br> En
+                caso de que quieras ponérselo solo a una palabra o palabras específicas, y no a todo el cuerpo de
+                texto, introduce ese fragmento de texto en un <span class="bold--primary">spam</span>, y atribúyele las
+                clases correspondientes.</p>
+            <div class="border bg-1">
+                <pre><code>&lt;h4 class=&quot;<span class="class">t--center</span>&quot;&gt;Soy un texto normal&lt;/h4&gt;
+&lt;h4 class=&quot;<span class="class">bold--p t--center</span>&quot;&gt;Soy un texto en bold&lt;/h4&gt;
+&lt;h4 class=&quot;<span class="class">italic t--center</span>&quot;&gt;Soy un texto en cursiva&lt;/h4&gt;</code></pre>
+            </div>
+        </section>
+        <section class="col-6 my10 px5 bg-1 flex-col">
+            <h4 class="t--center">Soy un texto normal</h4>
+            <h4 class="bold--p t--center">Soy un texto en bold</h4>
+            <h4 class="italic t--center">Soy un texto en cursiva</h4>
+        </section>
+        <section class="col-6 my10" id="align">
+            <h4>Alinear el texto</h4>
+            <p class="my5">En caso de que quieras <span class="bold--p">alinear el texto</span>, es muy sencillo. Lo
+                único que tienes que hacer
+                es utilizar
+                las siguientes clases: <span class="bold--primary">“t--center”</span> para centrarlo, <span
+                    class="bold--primary">“t--right”</span> para ponerlo en bandera derecha. <br>
+                Estas
+                clases te pueden ser muy útiles en el caso de que incluyas una <a class="link" href="#tabla">tabla</a>
+                en tu web y quieras alinear
+                textos de una columna de cierta forma, como unos números.</p>
+            <div class="border bg-1">
+                <pre><code>&lt;h4&gt;Este texto est&aacute; alineado a la &lt;span class=&quot;<span class="class">bold--p</span>&quot;&gt;izquierda&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 class=&quot;<span class="class">t--center</span>&quot;&gt;Este texto est&aacute; alineado al &lt;span class=&quot;bold--p&quot;&gt;centro&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 class=&quot;<span class="class">t--right</span>&quot;&gt;Este texto est&aacute; alineado a la &lt;span class=&quot;bold--p&quot;&gt;derecha&lt;/span&gt;&lt;/h4&gt;</code></pre>
+            </div>
+        </section>
+        <section class="col-6 my10 px5 bg-1 flex-col">
+            <h4>Este texto está alineado a la <span class="bold--p">izquierda</span></h4>
+            <h4 class="t--center">Este texto está alineado al <span class="bold--p">centro</span></h4>
+            <h4 class="t--right">Este texto está alineado a la <span class="bold--p">derecha</span></h4>
+        </section>
+    </article>
+    <article class="grid--12" id="layout">
+        <section class="col-12">
+            <h3>Layout</h3>
+            <p>Uno de los aspectos más importantes de una página web es la <span class="bold--p">rejilla</span>. Aquí te
+                explicamos cómo hacer
+                uso de la grid de MyFramework.</p>
+        </section>
+        <h4 class="col-12 my2" id="grid">Grid</h4>
+        <section class="col-6">
+            <p>Tenemos una <span class="bold--p">grid de 12 columnas</span>, que se adapta a la perfección a tu web.
+                Está diseñada para que en
+                ella coloques lo que quieras: textos, imágenes, cards, tablas… En el ejemplo puedes comprobar como
+                se utiliza para ordenar lo que está después de la imagen del Hero y el título principal. Para
+                adaptar una imagen a la columna, coloca la clase <span class="bold--primary">"col-img"</span> en el
+                contenedor corresponiente, como se
+                ve en el ejemplo.
+            </p>
+        </section>
+        <section class="col-6">
+            <p>
+                Por defecto, tiene un margen a los lados de 120px, para lo mencionado anteriormente. En caso de
+                que
+                quieras quitar este margen, puedes colocar la clase <span class="bold--primary">“no-m”</span> junto a
+                las demás clases del
+                contenedor
+                de la rejilla. También puedes quitar el espacio entre columnas o filas utilizando, de la misma forma, la
+                clase <span class="bold--primary">“no-gap”</span> o <span class="bold--primary">"no-rowgap"</span> (para
+                las filas).
+                <br> Para saber como colocar un <span class="bold--p">margen personalizado</span>, ver <a class="link"
+                    href="#utilities">utilities</a>.</p>
+        </section>
+        <section class="col-12 flex my5">
+            <div class="grid--12 no-m no-gap">
+                <div class="col-12 bg-1 b1 p2">12 columnas</div>
+                <div class="col-6 bg-1 b1 p2">6 columnas</div>
+                <div class="col-6 bg-1 b1 p2">6 columnas</div>
+                <div class="col-4 bg-1 b1 p2">4 columnas</div>
+                <div class="col-4 bg-1 b1 p2">4 columnas</div>
+                <div class="col-4 bg-1 b1 p2">4 columnas</div>
+                <div class="col-3 bg-1 b1 p2">3 columnas</div>
+                <div class="col-3 bg-1 b1 p2">3 columnas</div>
+                <div class="col-3 bg-1 b1 p2">3 columnas</div>
+                <div class="col-3 bg-1 b1 p2">3 columnas</div>
+                <div class="col-2 bg-1 b1 p2">2 col</div>
+                <div class="col-2 bg-1 b1 p2">2 col</div>
+                <div class="col-2 bg-1 b1 p2">2 col</div>
+                <div class="col-2 bg-1 b1 p2">2 col</div>
+                <div class="col-2 bg-1 b1 p2">2 col</div>
+                <div class="col bg-1 b1 p2">1 col</div>
+                <div class="col bg-1 b1 p2">1 col</div>
+            </div>
+        </section>
+        <section class="col-5 my10 p2 bg-1 border">
+            <pre><code>&lt;div class=&quot;<span class="class">grid--12</span>&quot;&gt;
+        &lt;div class=&quot;<span class="class">col-6</span>&quot;&gt;Contenido que ocupa 6 columnas&lt;/div&gt;
+        &lt;div class=&quot;<span class="class">col-6 col-img</span>&quot;&gt;
+            &lt;img src=&quot;#&quot; alt=&quot;Imagen que ocupa 6 columnas&quot;&gt;
+            &lt;h5&gt;Pie de foto&lt;/h5&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;<span class="class">col-3</span>&quot;&gt;Contenido que ocupa 3 columnas&lt;/div&gt;
+        &lt;div class=&quot;<span class="class">col-9</span>&quot;&gt;Contenido que ocupa 9 columnas&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+        <section class="col-7 my10 bg-1 p2 border">
+            <pre><code>&lt;div class=&quot;<span class="class">grid--12 no-m no-gap</span>&quot;&gt;
+        &lt;div class=&quot;<span class="class">col-12 bg-1 b1 p2</span>&quot;&gt;12 columnas&lt;/div&gt;
+        &lt;div class=&quot;<span class="class">col-6 bg-1 b1 p2</span>&quot;&gt;6 columnas&lt;/div&gt;
+        &lt;div class=&quot;<span class="class">col-6 bg-1 b1 p2</span>&quot;&gt;6 columnas&lt;/div&gt;
+        &lt;div class=&quot;<span class="class">col-4 bg-1 b1 p2</span>&quot;&gt;4 columnas&lt;/div&gt;
+        &lt;div class=&quot;<span class="class">col-4 bg-1 b1 p2</span>&quot;&gt;4 columnas&lt;/div&gt;
+        &lt;div class=&quot;<span class="class">col-4 bg-1 b1 p2</span>&quot;&gt;4 columnas&lt;/div&gt;
+        &lt;div class=&quot;<span class="class">col-3 bg-1 b1 p2</span>&quot;&gt;3 columnas&lt;/div&gt;
+        &lt;div class=&quot;<span class="class">col-3 bg-1 b1 p2</span>&quot;&gt;3 columnas&lt;/div&gt;
+        &lt;div class=&quot;<span class="class">col-3 bg-1 b1 p2</span>&quot;&gt;3 columnas&lt;/div&gt;
+        &lt;div class=&quot;<span class="class">col-3 bg-1 b1 p2</span>&quot;&gt;3 columnas&lt;/div&gt;
+        &lt;div class=&quot;<span class="class">col-2 bg-1 b1 p2</span>&quot;&gt;2 col&lt;/div&gt;
+        &lt;div class=&quot;<span class="class">col-2 bg-1 b1 p2</span>&quot;&gt;2 col&lt;/div&gt;
+        &lt;div class=&quot;<span class="class">col-2 bg-1 b1 p2</span>&quot;&gt;2 col&lt;/div&gt;
+        &lt;div class=&quot;<span class="class">col-2 bg-1 b1 p2</span>&quot;&gt;2 col&lt;/div&gt;
+        &lt;div class=&quot;<span class="class">col-2 bg-1 b1 p2</span>&quot;&gt;2 col&lt;/div&gt;
+        &lt;div class=&quot;<span class="class">col-1 bg-1 b1 p2</span>&quot;&gt;1 col&lt;/div&gt;
+        &lt;div class=&quot;<span class="class">col-1 bg-1 b1 p2</span>&quot;&gt;1 col&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+        <section class="col-6 my10">
+            <h4>Flex</h4>
+            <p>Utiliza la clase <span class="bold--primary">“flex”</span> para alinear elementos al centro y centrarlos.
+                Por ejemplo: estos dos botones.
+                Utiliza también la clase <span class="bold--primary">“flex-col”</span> para colocar los elementos en
+                dirección de columna.
+                <br>
+                Pulsa <a class="link" href="#components">aquí</a> saber cómo se crean los <span
+                    class="bold--p">botones.</span>
+            </p>
+        </section>
+        <div class="col-6"></div>
+        <section class="col-6 flex">
+            <button class="button"><a href="#">Botón 1</a></button>
+            <button class="button button--primary"><a href="#">Botón 2</a></button>
+        </section>
+        <section class="col-6 my10 bg-1 p2 border">
+            <pre><code> &lt;div class=&quot;<span class="class">flex</span>&quot;&gt;
+            &lt;button class=&quot;<span class="class">button</span>&quot;&gt;&lt;a href=&quot;#&quot;&gt;Bot&oacute;n 1&lt;/a&gt;&lt;/button&gt;
+            &lt;button class=&quot;<span class="class">button button--primary</span>&quot;&gt;&lt;a href=&quot;#&quot;&gt;Bot&oacute;n 2&lt;/a&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+    </article>
+    <article class="grid--12" id="components">
+        <section class="col-12">
+            <h3>Components</h3>
+            <p>Pasamos ahora a los diferentes <span class="bold--p">elementos que van a componer tu web</span>, además
+                del texto. Copia y pega
+                los códigos para ver como funcionan.</p>
+        </section>
+        <section class="col-6 my10">
+            <h4>Botones</h4>
+            <p>Tenemos dos tipos de botones. Uno <span class="bold--p">default</span>, o neutro, y otro <span
+                    class="bold--p">primario</span>, que puede servir para acciones
+                importantes. Utilízalos como quieras. En la imagen puedes ver como se ven al pasar el ratón
+                por encima.</p>
+            <div class="border bg-1 my10">
+                <pre><code>&lt;button class=&quot;<span class="class">button</span>&quot;&gt;
+        &lt;a href=&quot;#&quot;&gt;Bot&oacute;n default&lt;/a&gt;
+&lt;/button&gt;
+&lt;button class=&quot;<span class="class">button button--primary</span>&quot;&gt;
+        &lt;a href=&quot;#&quot;&gt;Bot&oacute;n primario&lt;/a&gt;
+&lt;/button&gt;</code></pre>
+            </div>
+        </section>
+        <figure class="col-6 my10 b1 col-img-cover">
+            <img src="../assets/images/botones.gif">
+        </figure>
+        <section class="col-6 my10">
+            <h4>Links</h4>
+            <p>También tenemos dos tipos de <span class="bold--p">links</span>. En este caso, uno que podría señalar la
+                página en la que se está
+                actualmente (si se utiliza en el menú) y otro para el resto de páginas. Solo debes poner la clase
+                <span class="bold--primary">“link”</span> a cualquier enlace que tengas en el texto y se le aplicarán
+                los estilos. Observa en la imagen
+                como funcionan los <span class="bold--p">hovers.</span></p>
+            <div class="border bg-1 my10">
+                <pre><code>&lt;a class=&quot;<span class="class">link active--link</span>&quot; href=&quot;#&quot;&gt;Link página actual&lt;/a&gt;
+&lt;a class=&quot;<span class="class">link</span>&quot; href=&quot;#&quot;&gt;Link normal&lt;/a&gt;</code></pre>
+            </div>
+        </section>
+        <figure class="col-6 my10 b1 col-img-cover">
+            <img src="../assets/images/links.gif">
+        </figure>
+        <section class="col-6 my2">
+            <h4>Formularios</h4>
+            <p>Este sencillo formulario incluye <span class="bold--p">campos de texto (nombre y apellidos), correo
+                    electrónico y contraseñas.</span>
+                También puedes añadir un <span class="bold--p">checkbox</span>, y no te olvides de incluir el <span
+                    class="bold--p">botón de enviar</span>.</p>
+        </section>
+        <section class="col-6">
+        </section>
+        <section class="col-6">
+            <div class="border bg-1 my2">
+                <pre><code> &lt;form&gt;
+    &lt;div class=&quot;<span class="class">form--item</span>&quot;&gt;
+        &lt;label for=&quot;name&quot;&gt;Nombre&lt;/label&gt;
+        &lt;input type=&quot;text&quot; id=&quot;name&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;<span class="class">form--item</span>&quot;&gt;
+        &lt;label for=&quot;name&quot;&gt;Apellidos&lt;/label&gt;
+        &lt;input type=&quot;text&quot; id=&quot;name&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;<span class="class">form--item</span>&quot;&gt;
+        &lt;label for=&quot;password&quot;&gt;Correo electr&oacute;nico&lt;/label&gt;
+        &lt;input type=&quot;email&quot; id=&quot;email&quot; aria-describedby=&quot;emailHelp&quot;&gt;
+        &lt;small id=&quot;emailHelp&quot; class=&quot;<span class="class">form-text</span>&quot;&gt;No compartiremos tu correo.&lt;/small&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;<span class="class">form--item</span>&quot;&gt;
+        &lt;label for=&quot;password&quot;&gt;Contrase&ntilde;a&lt;/label&gt;
+        &lt;input type=&quot;password&quot; id=&quot;password&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;<span class="class">form--item form-check</span>&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; id=&quot;accept&quot;&gt;
+        &lt;label class=&quot;<span class="class">form-check-label</span>&quot; for=&quot;accept&quot;&gt;Aceptar los t&eacute;rminos&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;button type=&quot;submit&quot; class=&quot;<span class="class">button button--primary</span>&quot;&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+            </div>
+        </section>
+        <div class="col-6 my2">
+            <form>
+                <div class="form--item">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="form--item">
+                    <label for="name">Apellidos</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="form--item">
+                    <label for="password">Correo electrónico</label>
+                    <input type="email" id="email" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text">No compartiremos tu correo.</small>
+                </div>
+                <div class="form--item">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password">
+                </div>
+                <div class="form--item form-check">
+                    <input type="checkbox" id="accept">
+                    <label class="form-check-label" for="accept">Aceptar los términos</label>
+                </div>
+                <button type="submit" class="button button--primary">Enviar</button>
+            </form>
+        </div>
+        <section class="col-6 my2">
+            <h4>List</h4>
+            <p>En el caso de que quieras añadir una lista, solo hace falta que utilices la clase <span
+                    class="bold--primary">"list"</span> en el ul. El
+                margen está colocado para <span class="bold--p">mejorar la
+                    jerarquía visual</span> de los elementos.</p>
+        </section>
+        <section class="col-6 my15">
+            <p>Por defecto, los <span class="bold--p">elementos principales</span> de la lista vendrán precedidos de un
+                disco negro, y los
+                <span class="bold--p">secundarios</span> por un círculo sin relleno. Coloca en el <span
+                    class="bold--primary"> &lt;li&gt;</span> correspondiente la clase <span
+                    class="bold--primary">“disc”</span> o
+                <span class="bold--primary">“circle”</span>
+                para modificar este aspecto a tu gusto.</p>
+        </section>
+        <section class="col-6">
+            <div class="border bg-1 my2">
+                <pre><code>&lt;ul class=&quot;<span class="class">list</span>&quot; &gt;
+        &lt;li&gt;Elemento de lista 1&lt;/li&gt;
+        &lt;li&gt;Elemento de lista 2
+                &lt;ul&gt;
+                    &lt;li&gt;Subelemento 1&lt;/li&gt;
+                    &lt;li class=&quot;<span class="class">disc</span>&quot;&gt;Subelemento 2&lt;/li&gt;
+                    &lt;li&gt;Subelemento 3&lt;/li&gt;
+                &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;<span class="class">circle</span>&quot;&gt;Elemento de lista 3&lt;/li&gt;
+        &lt;li class=&quot;<span class="class">circle</span>&quot;&gt;Elemento de lista 4&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </div>
+        </section>
+        <div class="col-6 my2 b1 flex">
+            <ul class="list">
+                <li>Elemento de lista 1</li>
+                <li>Elemento de lista 2
+                    <ul>
+                        <li>Subelemento 1</li>
+                        <li class="disc">Subelemento 2</li>
+                        <li>Subelemento 3</li>
+                    </ul>
+                </li>
+                <li class="circle">Elemento de lista 3</li>
+                <li class="circle">Elemento de lista 4</li>
+            </ul>
+        </div>
+        <section class="col-6 my10">
+            <h4>Hero con título y subtítulo</h4>
+            <p>Gracias a este componente, puedes colocar una <span class="bold--p">imagen principal</span> al inicio de
+                tu sitio, tal y como se
+                muestra en el ejemplo y en esta misma web. Además puedes situar sobre ella un <span
+                    class="bold--p">título</span> y un <span class="bold--p">subtítulo</span>
+                para darle nombre a esa página.</p>
+            <div class="border bg-1 my10">
+                <pre><code>&lt;div class=&quot;<span class="class">hero</span>&quot;&gt;
+        &lt;img class=&quot;<span class="class">hero--img</span>&quot; src=&quot;#&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;<span class="class">h1--box</span>&quot;&gt;
+        &lt;h1&gt;T&iacute;tulo de la p&aacute;gina&lt;/h1&gt;
+        &lt;h2&gt;Subt&iacute;tulo principal&lt;/h2&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </section>
+        <figure class="col-6 my10 b1 col-img flex-col">
+            <img src="../assets/images/hero_y_titulo.png">
+        </figure>
+        <section class="col-6 my10">
+            <h4>Barra de navegación</h4>
+            <p>La barra de navegación de MyFramework está compuesta por un <span class="bold--p">logotipo</span>, el
+                cual puedes cambiar a tu
+                gusto poniendo el de tu empresa, y un <span class="bold--p">conjunto de links</span> para navegar. Se
+                <span class="bold--p">adapta</span> dependiendo del
+                tamaño de la pantalla, y también admite <span class="bold--p">submenús.</span></p>
+        </section>
+        <figure class="col-6 my10 b1 col-img">
+            <img src="../assets/images/navbar1.png">
+        </figure>
+        <figure class="col-12 my10 b1 col-img">
+            <img src="../assets/images/navbar2.png">
+        </figure>
+        <section class="col-12 border bg-1 my10 codemax">
+            <pre><code>&lt;header&gt;
+    
+    &lt;!--Inserta aqu&iacute; tu logotipo--&gt;
+
+    &lt;a class=&quot;<span class="class">logo</span>&quot; href=&quot;#&quot;&gt;&lt;img src=&quot;#&quot; alt=&quot;logotipo&quot;&gt;&lt;/a&gt;
+
+    &lt;!--Pon aqu&iacute; tus p&aacute;ginas y sus respectivos links--&gt;
+
+    &lt;nav class=&quot;<span class="class">navbar</span>&quot;&gt;
+        &lt;ul class=&quot;<span class="class">navbar--items</span>&quot; id=&quot;menu&quot;&gt;
+            &lt;li class=&quot;<span class="class">navbar--link</span>&quot;&gt;&lt;a class=&quot;<span class="class">link active--link</span>&quot; href=&quot;#&quot;&gt;P&aacute;gina 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;<span class="class">navbar--link</span>&quot;&gt;&lt;a class=&quot;<span class="class">link</span>&quot; href=&quot;#&quot;&gt;P&aacute;gina 2&lt;/a&gt;
+                &lt;ul&gt;
+                    &lt;li class=&quot;<span class="class">submenu</span>&quot;&gt;&lt;a href=&quot;#&quot;&gt;Subp&aacute;gina 1&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;<span class="class">submenu</span>&quot;&gt;&lt;a href=&quot;#&quot;&gt;Subp&aacute;gina 2&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;<span class="class">submenu</span>&quot;&gt;&lt;a href=&quot;#&quot;&gt;Subp&aacute;gina 3&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;<span class="class">navbar--link</span>&quot;&gt;&lt;a class=&quot;<span class="class">link</span>&quot; href=&quot;#&quot;&gt;P&aacute;gina 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;<span class="class">navbar--link</span>&quot;&gt;&lt;a class=&quot;<span class="class">link</span>&quot; href=&quot;#&quot;&gt;P&aacute;gina 4&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;<span class="class">navbar--link</span>&quot;&gt;&lt;a class=&quot;<span class="class">link</span>&quot; href=&quot;#&quot;&gt;P&aacute;gina 5&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;!--No tocar, esto es el bot&oacute;n que cierra el men&uacute; en m&oacute;vil--&gt;
+
+        &lt;div id=&quot;toggle&quot;&gt;
+            &lt;div class=&quot;<span class="class">span</span>&quot; id=&quot;one&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;<span class="class">span</span>&quot; id=&quot;two&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;<span class="class">span</span>&quot; id=&quot;three&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;!-- Rellena aqu&iacute; tambi&eacute;n tus p&aacute;ginas del men&uacute; --&gt;
+
+    &lt;/nav&gt;
+    &lt;div id=&quot;resize&quot;&gt;
+        &lt;ul id=&quot;menu&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;P&aacute;gina 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;P&aacute;gina 2&lt;/a&gt;
+                &lt;ul class=&quot;submenu-box&quot;&gt;
+                    &lt;li class=&quot;<span class="class">submenu</span>&quot;&gt;&lt;a href=&quot;#&quot;&gt;Subp&aacute;gina 1&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;<span class="class">submenu</span>&quot;&gt;&lt;a href=&quot;#&quot;&gt;Subp&aacute;gina 2&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;<span class="class">submenu</span>&quot;&gt;&lt;a href=&quot;#&quot;&gt;Subp&aacute;gina 3&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;P&aacute;gina 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;P&aacute;gina 4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;P&aacute;gina 5&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/header&gt;</code></pre>
+        </section>
+        <section class="col-6 my10">
+            <h4>Card</h4>
+            <p>Este componente te da la posibilidad de incluir una <span class="bold--p">imagen, un pie de foto, un
+                    título y un texto, y
+                    un botón</span> para navegar. Se adapta también a la pantalla. Puedes incluir varias utilizando <a
+                    class="link" href="#grid">grid</a> para
+                disponerlas en orden, mira cómo se ha hecho en el ejemplo.</p>
+            <div class="border bg-1 my10">
+                <pre><code>&lt;div class=&quot;<span class="class">card</span>&quot;&gt;
+    &lt;figure&gt;
+        &lt;img src=&quot;#&quot; alt=&quot;&quot;&gt;
+    &lt;/figure&gt;
+    &lt;div class=&quot;<span class="class">card-text</span>&quot;&gt;
+        &lt;h5&gt;PIE DE FOTO&lt;/h5&gt;
+        &lt;H4&gt;Esto es un texto de ejemplo&lt;/H4&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Vitae quis eros feugiat eu purus vestibulum
+            integer consectetur nec. Semper sed. 
+            Eu lacus, amet, massa tincidunt curabitur 
+            ipsum consectetur dignissim. Eget auctor non viverra
+            molestie aliquam. &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;button class=&quot;<span class="class">button button--primary</span>&quot;&gt;&lt;a href=&quot;#&quot;&gt;Leer m&aacute;s&lt;/a&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </section>
+        <figure class="col-6 my10 col-img">
+            <div class="card">
+                <figure>
+                    <img src="https://i.picsum.photos/id/1011/5472/3648.jpg?hmac=Koo9845x2akkVzVFX3xxAc9BCkeGYA9VRVfLE4f0Zzk"
+                        alt="">
+                </figure>
+                <div class="card-text">
+                    <h5>PIE DE FOTO</h5>
+                    <H4>Esto es un texto de ejemplo</H4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae quis eros feugiat eu purus
+                        vestibulum
+                        integer
+                        consectetur nec. Semper sed. Eu lacus, amet, massa tincidunt curabitur ipsum consectetur
+                        dignissim.
+                        Eget
+                        auctor non viverra molestie aliquam. </p>
+                </div>
+                <button class="button button--primary"><a href="#">Leer más</a></button>
+            </div>
+        </figure>
+        <section class="col-6 my10" id="tabla">
+            <h4>Tabla</h4>
+            <p>Si tienes que incluir una serie de <span class="bold--p">datos</span> en tu web y necesitas que se vea
+                bien gráficamente para que
+                lo entiendan tus clientes, este es tu componente. Esta tabla te permite hacer <span
+                    class="bold--p">scroll horizontal</span> para
+                que veas todos los campos que has introducido en ella, incluso en el móvil. Mira cómo alinear los
+                textos <a class="link" href="#align">aquí</a>.</p>
+            <div class="my5 p2 bg-1 border codemax">
+                <pre><code>&lt;div class=&quot;<span class="class">responsive--table</span>&quot;&gt;
+                &lt;table&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;Nombre&lt;/th&gt;
+                        &lt;th&gt;Apellido&lt;/th&gt;
+                        &lt;th&gt;Correo electr&oacute;nico&lt;/th&gt;
+                        &lt;th&gt;Registro&lt;/th&gt;
+                        &lt;th&gt;Aportaci&oacute;n&lt;/th&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Fidela&lt;/td&gt;
+                        &lt;td&gt;P&eacute;rez&lt;/td&gt;
+                        &lt;td&gt;fidelap@gmail.com&lt;/td&gt;
+                        &lt;td class=&quot;<span class="class">t--center</span>&quot;&gt;05/06/2020&lt;/td&gt;
+                        &lt;td class=&quot;<span class="class">t--right</span>&quot;&gt;53 938,77 &euro;&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Bautista&lt;/td&gt;
+                        &lt;td&gt;Hern&aacute;ndez&lt;/td&gt;
+                        &lt;td&gt;bhernandez@hotmail.com&lt;/td&gt;
+                        &lt;td class=&quot;<span class="class">t--center</span>&quot;&gt;05/06/2018&lt;/td&gt;
+                        &lt;td class=&quot;<span class="class">t--right</span>&quot;&gt;34 332,89 &euro;&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Feliciana&lt;/td&gt;
+                        &lt;td&gt;Ure&ntilde;a&lt;/td&gt;
+                        &lt;td&gt;feliure&ntilde;a@gmail.com&lt;/td&gt;
+                        &lt;td class=&quot;<span class="class">t--center</span>&quot;&gt;05/06/2017&lt;/td&gt;
+                        &lt;td class=&quot;<span class="class">t--right</span>&quot;&gt;89 334,43 &euro;&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Gabriel&lt;/td&gt;
+                        &lt;td&gt;Lopez&lt;/td&gt;
+                        &lt;td&gt;gablop@gmail.com&lt;/td&gt;
+                        &lt;td class=&quot;<span class="class">t--center</span>&quot;&gt;05/06/2021&lt;/td&gt;
+                        &lt;td class=&quot;<span class="class">t--right</span>&quot;&gt;12 833,23 &euro;&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+        &lt;/div&gt;</code></pre>
+            </div>
+        </section>
+        <section class="col-6 flex">
+            <div class="responsive--table">
+                <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Correo electrónico</th>
+                        <th>Registro</th>
+                        <th>Aportación</th>
+                    </tr>
+                    <tr>
+                        <td>Fidela</td>
+                        <td>Pérez</td>
+                        <td>fidelap@gmail.com</td>
+                        <td class="t--center">05/06/2020</td>
+                        <td class="t--right">53 938,77 €</td>
+                    </tr>
+                    <tr>
+                        <td>Bautista</td>
+                        <td>Hernández</td>
+                        <td>bhernandez@hotmail.com</td>
+                        <td class="t--center">05/06/2018</td>
+                        <td class="t--right">34 332,89 €</td>
+                    </tr>
+                    <tr>
+                        <td>Feliciana</td>
+                        <td>Ureña</td>
+                        <td>feliureña@gmail.com</td>
+                        <td class="t--center">05/06/2017</td>
+                        <td class="t--right">89 334,43 €</td>
+                    </tr>
+                    <tr>
+                        <td>Gabriel</td>
+                        <td>Lopez</td>
+                        <td>gablop@gmail.com</td>
+                        <td class="t--center">05/06/2021</td>
+                        <td class="t--right">12 833,23 €</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </article>
+    <article class="grid--12" id="utilities">
+        <section class="col-12">
+            <h3>Utilities</h3>
+            <p>Estas son otros aspectos que pueden mejorar tu web.</p>
+        </section>
+        <section class="col-6 my10">
+            <h4>Colores</h4>
+            <p>El <span class="bold--p">color principal</span> de todos los componentes es el azul marino,
+                específicamente el <span class="bold--primary">#104A88</span>.
+                Si deseas cambiarlo, puedes modificar la variable <span class="bold--primary">$primary</span> e
+                introducir el color que prefieras.
+                Otros colores que encontrarás en la web son varios tonos de grises, de azules y básicos como el
+                blanco y el negro.</p>
+        </section>
+        <section class="col-6 my10 px5 flex">
+            <div class="primary m2"></div>
+            <div class="black m2"></div>
+            <div class="grey1 m2"></div>
+            <div class="grey2 m2"></div>
+            <div class="grey3 m2"></div>
+            <div class="grey4 m2"></div>
+            <div class="white m2"></div>
+        </section>
+        <section class="col-6 my10">
+            <h4>Márgenes y paddings</h4>
+            <p class="my5">Puedes cambiar el margen y el padding de cualquier elemento con estas clases. Utilizando<span
+                    class="bold--primary"> “m”</span>
+                o
+                <span class="bold--primary">“p”</span> cambiarás el margen o el padding general, respectivamente. Las
+                clases <span class="bold--primary">“mx”</span> y <span class="bold--primary">“px”</span> son para los
+                márgenes laterales, y <span class="bold--primary">“my”</span> y <span class="bold--primary">“py”</span>
+                cambiarán los márgenes superior e inferior.
+                <br>
+                Pon un número, al lado de esa clase, <span class="bold--p">del 1 al 5, o 10, 15 y 20,</span> para variar
+                el tamaño. Observa cómo
+                se
+                hace en el ejemplo.</p>
+            <div class="border bg-1 my-10">
+                <pre><code>&lt;!--Margins--&gt;
+&lt;div class=&quot;<span class="class">m5 t--center</span>&quot;&gt;Tengo un margen general de 20px&lt;/div&gt;
+&lt;div class=&quot;<span class="class">my5 t--center</span>&quot;&gt;Tengo un margen superior e inferior de 20px&lt;/div&gt;
+&lt;div class=&quot;<span class="class">mx5 t--center</span>&quot;&gt;Tengo un margen a los lados de 20px&lt;/div&gt;
+
+&lt;!--Paddings--&gt;
+
+&lt;div class=&quot;<span class="class">p5 t--center</span>&quot;&gt;Tengo un padding general de 20px&lt;/div&gt;
+&lt;div class=&quot;<span class="class">py5 t--center</span>&quot;&gt;Tengo un padding superior e inferior de 20px&lt;/div&gt;
+&lt;div class=&quot;<span class="class">px5 t--center</span>&quot;&gt;Tengo un padding a los lados de 20px&lt;/div&gt;</code></pre>
+            </div>
+        </section>
+        <section class=" col-6 bg-1 my10 flex-col">
+            <!--Márgenes-->
+            <div class="m5 t--center b1">Tengo un margen general de 20px</div>
+            <div class="my5 t--center b1">Tengo un margen superior e inferior de 20px</div>
+            <div class="mx5 t--center b1">Tengo un margen a los lados de 20px</div>
+            <div class="blankspace my2"></div>
+            <!--Paddings-->
+            <div class="p5 b1 t--center">Tengo un padding general de 20px</div>
+            <div class="py5 b1 t--center">Tengo un padding superior e inferior de 20px</div>
+            <div class="px5 b1 t--center">Tengo un padding a los lados de 20px</div>
+        </section>
+        <section class="col-6 my10">
+            <h4>Bordes y fondos</h4>
+            <p class="my5">Por último, puedes modificar con las siguientes clases el <span
+                    class="bold--p">borde</span> o el <span class="bold--p">fondo</span> de un elemento,
+                como se
+                muestra en el código. Si utilizas la clase <span class="bold--primary">“bor—rad”</span>, se le aplicará el estilo del borde puntiagudo
+                y redondo que tienen los elementos como los botones, o el contenedor del código. Este estilo está
+                aplicado a la mayoría de componentes ya, ¡pruébalo con una imagen!</p>
+            <div class="border bg-1 my-10">
+                <pre><code>&lt;div class=&quot;<span class="class">b1</span>&quot;&gt;Tendr&eacute; un marco azul claro fino&lt;/div&gt;
+&lt;div class=&quot;<span class="class">border</span>&quot;&gt;Tendr&eacute; un marco azul gordo&lt;/div&gt;
+&lt;div class=&quot;<span class="class">bg-1</span>&quot;&gt;Tendr&eacute; un fondo azul claro&lt;/div&gt;
+&lt;div class=&quot;<span class="class">bor--rad</span>&quot;&gt;Cambia la forma de mi marco&lt;/div&gt;</code></pre>
+            </div>
+        </section>
+        <section class="col-6 my10 px5 flex">
+            <div class="color b1 m2"></div>
+            <div class="color border m2"></div>
+            <div class="color bg-1 m2"></div>
+        </section>
+    </article>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="../assets/.vscode/script.js"></script>
+</body>
+
+</html>

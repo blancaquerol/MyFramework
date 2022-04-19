@@ -1,0 +1,30 @@
+.button
+    padding: $base * 1.5 $base * 4
+    font-size: $base * 4
+    border-radius: 0px $base * 3
+    background-color: $white
+    border: 2.5px solid $grey--20
+    width: fit-content
+    &:hover
+        color: $white
+        a
+            color: $white
+        border-color: $grey--20
+        background-color: $grey--80
+    &:focus
+        border-color: $primary
+    a
+        text-decoration: none
+        color: black
+        padding: 10px
+
+.button--primary
+    background-color: $primary
+    border-color: $primary--border
+    color: $white
+    &:hover
+        border-color: $primary--hoverborder
+        background-color: $primary--hover
+    a
+        text-decoration: none
+        color: white

@@ -1,0 +1,116 @@
+// CARD
+
+.card
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    background-color: #fff
+    margin: $base * 3 0
+    box-shadow: 6px 6px 22px -10px rgba(0, 0, 0, 0.25)
+    figure
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    .card-text
+        padding: 0 24px
+        h5
+            background-color: $grey--30
+            width: fit-content
+            padding: $base * 2
+            color: $white
+            margin: $base * 2 0
+        h3
+            margin: $base * 3 0
+    .button
+        margin: $base * 6 $base * 6
+
+
+// LINKS
+a.link
+    text-decoration: none
+    color: $primary
+    &:hover
+        color: $primary--hover
+
+a.active--link
+    color: $grey--60
+    &:hover
+        color: $grey--80
+
+// H1 BOX
+.h1--box
+    text-align: center
+    background-color: $white
+    padding: $base * 5 $base * 8
+    width: fit-content
+    box-shadow: 1px 8px 10px 2px rgba(0, 0, 0, 0.05)
+    position: absolute
+    z-index: 1
+    top: 450px
+    @media screen and ( max-width: 800px )
+        top: 300px
+
+// HERO
+.hero
+    margin-bottom: $base * 30
+    position: relative
+    .hero--img
+        width: 100vw
+        height: 550px
+        object-fit: cover
+        @media screen and ( max-width: 800px )
+            height: 350px
+    @media screen and ( max-width: 800px )
+        margin-bottom: $base * 35
+
+
+// IMG QUOTE
+.col-img
+    margin: $base * 5 0
+    img
+        width: 100%
+.col-img-cover
+    margin: $base * 5 0
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+//Listas
+ul.list
+    margin: 0 $base * 5
+    li
+        margin: $base $base * 5
+        ul
+            li
+                color: $grey--60
+li.disc
+    list-style: disc
+li.circle
+    list-style: circle
+
+//Form
+form
+    display: flex
+    justify-content: center
+    border: 1px solid $primary
+    flex-direction: column
+    padding: $base * 8
+    width: 500px
+    height: 100%
+    .form--item:not(.form-check)
+        padding: $base * 3 0
+        display: flex
+        flex-direction: column
+        small
+            margin: $base * 2 0
+        input
+            background-color: $table--lightblue
+            border: 0.5px solid $primary
+            padding: $base *2
+            margin-top: $base
+            border-radius: $base
+    .button
+        margin-top: $base * 5
